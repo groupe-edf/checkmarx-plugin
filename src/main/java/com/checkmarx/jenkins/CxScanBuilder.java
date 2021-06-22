@@ -903,7 +903,7 @@ public class CxScanBuilder extends Builder implements SimpleBuildStep {
             SASTResults sastResults = scanResults.getSastResults();
             if (sastResults != null && sastResults.isSastResultsReady()) {
                 if (config.getGenerateXmlReport() == null || config.getGenerateXmlReport()) {
-                    createSastReports(sastResults, checkmarxBuildDir, workspace);
+//                    createSastReports(sastResults, checkmarxBuildDir, workspace);
                 }
                 addEnvVarAction(run, sastResults);
                 cxScanResult.setSastResults(sastResults);
@@ -913,9 +913,9 @@ public class CxScanBuilder extends Builder implements SimpleBuildStep {
             OSAResults osaResults = scanResults.getOsaResults();
             AstScaResults scaResults = scanResults.getScaResults();
             if (osaResults != null && osaResults.isOsaResultsReady()) {
-                createOsaReports(osaResults, checkmarxBuildDir);
+//                createOsaReports(osaResults, checkmarxBuildDir);
             } else if (scaResults != null && scaResults.isScaResultReady()) {
-                createScaReports(scaResults, checkmarxBuildDir);
+//                createScaReports(scaResults, checkmarxBuildDir);
             }
             return;
         }
