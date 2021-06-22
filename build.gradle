@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url 'http://repo.jenkins-ci.org/releases/' }
+        maven { url 'https://repo.jenkins-ci.org/releases/' }
     }
     dependencies {
         classpath 'org.jenkins-ci.tools:gradle-jpi-plugin:0.35.0',
@@ -21,7 +21,7 @@ apply plugin: 'nebula.provided-base'
 repositories {
     jcenter()
     mavenLocal()        // Use this to load a custom build of Common Client from a local Maven repo.
-    maven { url 'http://repo.jenkins-ci.org/releases/' }
+    maven { url 'https://repo.jenkins-ci.org/releases/' }
     maven { url 'http://cx-artifactory:8081/artifactory/libs-release/' }
     maven { url 'http://cx-artifactory:8081/artifactory/libs-snapshot' }
     maven { url 'http://cx-artifactory:8081/artifactory/plugins-release-local/' }
@@ -46,6 +46,7 @@ dependencies {
 
     compile 'com.checkmarx:cx-client-common:2021.2.159',
             'com.checkmarx:cx-config-provider:1.0.14',
+            'com.typesafe:config:1.3.3',
             'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.5',
             'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.5'
             constraints {
