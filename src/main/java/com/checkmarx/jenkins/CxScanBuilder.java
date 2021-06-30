@@ -894,7 +894,7 @@ public class CxScanBuilder extends Builder implements SimpleBuildStep {
         if (config.getSynchronous()) {
 
             //generate html report
-            String reportName = generateHTMLReport(workspace, checkmarxBuildDir, config, scanResults);
+            String reportName = null;//generateHTMLReport(workspace, checkmarxBuildDir, config, scanResults);
             cxScanResult.setHtmlReportName(reportName);
             run.addAction(cxScanResult);
 
